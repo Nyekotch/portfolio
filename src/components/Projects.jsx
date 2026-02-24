@@ -17,32 +17,42 @@ export default function Projects() {
             emoji: '🏨',
             title: 'school Management System',
             description: 'Système complet de gestion hôtelière d\'une ecole primaire',
-            tech: ['React', 'laravel', 'MySQL', ]
+            tech: ['React', 'laravel', 'MySQL', ],
+            github: 'https://github.com/Nyekotch/school-management',
+            demo: 'https://school-management-demo.com'
         },
         {
             emoji: '💰',
             title: 'Conception et realisation d\'une plateforme de gestion des dechets',
             description: 'une application web et mobile dédiée à la gestion et à la signalisation des déchets urbains au Cameroun, avec un focus particulier sur la ville de Douala.',
-            tech: ['React', 'Tailwind', 'laravel', 'MySQL', 'postman', 'git', 'React Native']
+            tech: ['React', 'Tailwind', 'laravel', 'MySQL', 'postman', 'git', 'React Native'],
+            github: 'https://github.com/Nyekotch/waste-management',
+            demo: 'https://ecoclean-front-fnyg.vercel.app/'
         },
         {
             emoji: '👥',
-            title: 'CRM Client Management',
-            description: 'Plateforme CRM intuitive pour gérer clients et interactions commerciales.',
-            tech: ['React', 'Laravel', 'MySQL']
+            title: 'Developpement d\'un site pour un Bureau D\'Etude environnemental',
+            description: '',
+            tech: ['React','Node.js'],
+            github: 'https://github.com/Nyekotch/environmental-office',
+            demo: 'https://ecomove237.vercel.app/'
         },
 
         {
             emoji: '📊',
             title: 'Analytics & Reporting Tool',
             description: 'Outil d\'analytics avec rapports personnalisés et exports.',
-            tech: ['React', 'D3.js', 'PostgreSQL']
+            tech: ['React', 'D3.js', 'PostgreSQL'],
+            github: 'https://github.com/Nyekotch/analytics-tool',
+            demo: 'https://analytics-tool-demo.com'
         },
         {
-            emoji: '🔐',
-            title: 'Authentication System',
-            description: 'Système d\'authentification sécurisé avec JWT et 2FA.',
-            tech: ['Node.js', 'JWT', 'PostgreSQL']
+            emoji: '👥',
+            title: 'Conception et developpement d\'une application web pour une Association',
+            description: 'Destinée aux ressortissants du Département de la Lekie au cameroun',
+            tech: ['React','nestjs', 'Docker', 'PostgreSQL', 'git'],
+            github: 'https://github.com/Nyekotch/association-app',
+            demo: 'https://association-web-blush.vercel.app/'
         }
     ];
 
@@ -109,7 +119,13 @@ export default function Projects() {
                         onMouseEnter={() => setHoveredProject(index)}
                         onMouseLeave={() => setHoveredProject(null)}
                     >
-                        <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg border border-gray-700/30 rounded-2xl overflow-hidden hover:border-gray-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-400/20 group h-full flex flex-col">
+                        <a 
+                            href={project.demo} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="block h-full"
+                        >
+                            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg border border-gray-700/30 rounded-2xl overflow-hidden hover:border-gray-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-400/20 group h-full flex flex-col cursor-pointer">
                             {/* Project Header */}
                             <div className="relative h-48 bg-gradient-to-br from-gray-700/50 to-gray-800/50 flex items-center justify-center overflow-hidden">
                                 <div className="text-6xl transform transition-transform duration-300 group-hover:scale-110">
@@ -142,13 +158,19 @@ export default function Projects() {
                                 {/* Action Buttons */}
                                 <div className="flex gap-3">
                                     <a
-                                        href="#"
+                                        href={project.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={(e) => e.stopPropagation()}
                                         className="flex-1 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 hover:from-cyan-400/40 hover:to-blue-400/40 text-cyan-400 py-2 rounded-lg transition-all duration-300 font-semibold text-center border border-cyan-400/30 hover:border-cyan-400/50"
                                     >
                                         GitHub
                                     </a>
                                     <a
-                                        href="#"
+                                        href={project.demo}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={(e) => e.stopPropagation()}
                                         className="flex-1 bg-gradient-to-r from-purple-400/20 to-pink-400/20 hover:from-purple-400/40 hover:to-pink-400/40 text-purple-400 py-2 rounded-lg transition-all duration-300 font-semibold text-center border border-purple-400/30 hover:border-purple-400/50"
                                     >
                                         Démo
@@ -156,6 +178,7 @@ export default function Projects() {
                                 </div>
                             </div>
                         </div>
+                        </a>
                     </div>
                 ))}
             </div>

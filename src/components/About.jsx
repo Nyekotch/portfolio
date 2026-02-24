@@ -68,8 +68,7 @@ export default function About() {
                             Objectif
                         </h3>
                         <p className="text-gray-300 leading-relaxed text-lg">
-                            Mon objectif : Rejoindre une équipe dynamique en télétravail au Canada ou à l'international,
-                            où je pourrai contribuer à des projets d'envergure tout en continuant à approfondir mes
+                            Mon objectif : Rejoindre une équipe dynamique contribuer à des projets d'envergure tout en continuant à approfondir mes
                             compétences en architecture logicielle et design système.
                         </p>
                     </div>

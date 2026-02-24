@@ -16,9 +16,12 @@ export default function Skills() {
                 { name: 'React', level: 80, color: 'from-cyan-400 to-blue-400' },
                 { name: 'Node.js', level: 60, color: 'from-green-400 to-emerald-400' },
                 { name: 'Tailwind CSS', level: 60, color: 'from-cyan-400 to-blue-400' },
-                { name: 'Laravel', level: 65, color: 'from-red-400 to-orange-400' },
+                { name: 'Laravel', level: 60, color: 'from-red-400 to-orange-400' },
                 { name: 'PostgreSQL', level: 60, color: 'from-purple-400 to-pink-400' },
-                { name: 'MySQL', level: 75, color: 'from-blue-400 to-indigo-400' }
+                { name: 'MySQL', level: 75, color: 'from-blue-400 to-indigo-400' },
+                { name: 'NestJs', level: 55, color: 'from-red-400 to-orange-400' },
+                { name: 'TypeScript', level: 45, color: 'from-red-400 to-orange-400' },
+                { name: 'Javascript', level: 65, color: 'from-red-400 to-orange-400' },
             ]
         },
         tools: {
@@ -28,7 +31,9 @@ export default function Skills() {
                 { name: 'Vercel & Railway', level: 65, color: 'from-purple-400 to-pink-400' },
                 { name: 'REST APIs', level: 88, color: 'from-green-400 to-emerald-400' },
                 { name: 'VS Code', level: 95, color: 'from-blue-400 to-purple-400' },
-                { name: 'Figma', level: 30, color: 'from-pink-400 to-purple-400' }
+                { name: 'Docker', level: 30, color: 'from-pink-400 to-purple-400' },
+                { name: 'Postman', level:60, color: 'from-pink-400 to-purple-400'}
+                
             ]
         },
         languages_spoken: {

@@ -47,7 +47,7 @@ export default function Projects() {
     ];
 
     const categories = [
-        { id: 'all', label: 'Tous', color: 'from-cyan-400 to-purple-400' },
+        { id: 'all', label: 'Tous', color: 'from-cyan-400 to-purple-400 pg-white' },
         { id: 'web', label: 'Web', color: 'from-blue-400 to-indigo-400' },
         { id: 'mobile', label: 'Mobile', color: 'from-green-400 to-emerald-400' },
         { id: 'fullstack', label: 'Full-Stack', color: 'from-purple-400 to-pink-400' }

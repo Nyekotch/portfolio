@@ -1,4 +1,4 @@
-import avatar from "../assets/avatar.png";
+import image from "../assets/image.jpg";
 import { useState, useEffect } from 'react';
 
 export default function About() {
@@ -50,7 +50,7 @@ export default function About() {
                         <div className="relative w-64 h-64 mx-auto">
                             <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400 rounded-full animate-spin opacity-20"></div>
                             <img 
-                                src={avatar} 
+                                src={image} 
                                 alt="Vincent de Paul Nyekotch" 
                                 className="relative w-full h-full rounded-full object-cover border-4 border-gray-800 shadow-2xl group-hover:scale-105 transition-transform duration-300"
                             />

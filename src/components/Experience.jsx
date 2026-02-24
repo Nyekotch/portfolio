@@ -106,26 +106,26 @@ export default function Experience() {
     const currentData = activeTab === 'experience' ? experiences : formations;
 
     return (
-        <section id="experience" className="min-h-screen py-20 px-6 max-w-7xl mx-auto relative overflow-hidden">
+        <section id="experience" className="min-h-screen py-20 px-6 max-w-7xl mx-auto relative overflow-hidden bg-white">
             {/* Background animated elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-full blur-3xl animate-pulse"></div>
-                <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-cyan-400/10 to-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-100/30 to-purple-100/30 rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-cyan-100/30 to-blue-100/30 rounded-full blur-3xl animate-pulse"></div>
             </div>
 
             {/* Animated Title */}
             <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                 <h2 className="text-5xl md:text-7xl font-bold mb-4">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-purple-600">
                         Parcours
                     </span>
                 </h2>
-                <div className="w-32 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto rounded-full"></div>
+                <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
             </div>
 
             {/* Tabs Navigation */}
             <div className={`flex justify-center mb-12 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg border border-gray-700/30 rounded-full p-2 flex gap-2">
+                <div className="bg-white border border-gray-200 rounded-full p-2 flex gap-2 shadow-lg">
                     {tabs.map((tab) => (
                         <button
                             key={tab.id}
@@ -133,7 +133,7 @@ export default function Experience() {
                             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                                 activeTab === tab.id
                                     ? `bg-gradient-to-r ${tab.color} text-white shadow-lg`
-                                    : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
+                                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                             }`}
                         >
                             {tab.label}
@@ -145,7 +145,7 @@ export default function Experience() {
             {/* Timeline */}
             <div className="relative z-10">
                 {/* Timeline Line */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-400 to-purple-400 opacity-30"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-400 to-purple-400 opacity-30"></div>
 
                 {currentData.map((item, index) => (
                     <div
@@ -156,22 +156,22 @@ export default function Experience() {
                         style={{ transitionDelay: `${index * 200}ms` }}
                     >
                         {/* Timeline Dot */}
-                        <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full border-4 border-gray-900 z-20">
-                            <div className="w-full h-full rounded-full animate-ping bg-gradient-to-r from-cyan-400 to-purple-400 opacity-30"></div>
+                        <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full border-4 border-white z-20">
+                            <div className="w-full h-full rounded-full animate-ping bg-gradient-to-r from-blue-400 to-purple-400 opacity-30"></div>
                         </div>
 
                         {/* Content */}
                         <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:ml-auto md:pl-12'}`}>
-                            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg border border-gray-700/30 rounded-2xl p-8 hover:border-gray-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-400/20 group">
+                            <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:border-gray-300 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-200/50 group">
                                 {/* Header */}
                                 <div className="mb-4">
                                     <h3 className={`text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r ${item.color} mb-2`}>
                                         {item.title}
                                     </h3>
-                                    <div className={`text-lg font-semibold text-gray-200 mb-1 ${index % 2 === 0 ? 'md:text-right' : ''}`}>
+                                    <div className={`text-lg font-semibold text-gray-800 mb-1 ${index % 2 === 0 ? 'md:text-right' : ''}`}>
                                         {item.company}
                                     </div>
-                                    <div className={`text-sm text-gray-400 mb-1 ${index % 2 === 0 ? 'md:text-right' : ''}`}>
+                                    <div className={`text-sm text-gray-600 mb-1 ${index % 2 === 0 ? 'md:text-right' : ''}`}>
                                         {item.location}
                                     </div>
                                     <div className={`inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r ${item.color} text-white text-sm font-semibold ${index % 2 === 0 ? 'md:ml-auto' : ''}`}>
@@ -180,12 +180,12 @@ export default function Experience() {
                                 </div>
 
                                 {/* Description */}
-                                <p className="text-gray-300 mb-4">
+                                <p className="text-gray-700 mb-4">
                                     {item.description}
                                 </p>
 
                                 {/* Responsibilities */}
-                                <ul className="text-gray-300 mb-4 space-y-2">
+                                <ul className="text-gray-700 mb-4 space-y-2">
                                     {item.responsibilities.map((resp, idx) => (
                                         <li key={idx} className="flex items-start">
                                             <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${item.color} mr-3 mt-2 flex-shrink-0`}></div>
@@ -197,7 +197,7 @@ export default function Experience() {
                                 {/* Technologies */}
                                 <div className="flex flex-wrap gap-2">
                                     {item.technologies.map((tech, idx) => (
-                                        <span key={idx} className={`px-3 py-1 bg-gradient-to-r ${item.color}/20 text-white rounded-full text-xs font-semibold border border-${item.color.split(' ')[0].split('-')[1]}-400/30`}>
+                                        <span key={idx} className={`px-3 py-1 bg-gradient-to-r ${item.color}/10 text-gray-800 rounded-full text-xs font-semibold border border-${item.color.split(' ')[0].split('-')[1]}-300/50`}>
                                             {tech}
                                         </span>
                                     ))}
@@ -210,22 +210,22 @@ export default function Experience() {
 
             {/* Bottom Stats */}
             <div className={`text-center mt-20 transform transition-all duration-1000 delay-800 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                <div className="inline-flex items-center bg-gradient-to-r from-purple-400/20 to-cyan-400/20 backdrop-blur-lg border border-purple-400/30 rounded-full px-8 py-4">
+                <div className="inline-flex items-center bg-white border border-gray-200 rounded-full px-8 py-4 shadow-lg">
                     <div className="flex gap-8">
                         <div className="text-center">
-                            <div className="text-2xl font-bold text-cyan-400">
+                            <div className="text-2xl font-bold text-blue-600">
                                 {activeTab === 'experience' ? experiences.length : formations.length}
                             </div>
-                            <div className="text-sm text-gray-400">
+                            <div className="text-sm text-gray-600">
                                 {activeTab === 'experience' ? 'Expériences' : 'Formations'}
                             </div>
                         </div>
-                        <div className="w-px bg-gray-600"></div>
+                        <div className="w-px bg-gray-300"></div>
                         <div className="text-center">
-                            <div className="text-2xl font-bold text-purple-400">
+                            <div className="text-2xl font-bold text-purple-600">
                                 {activeTab === 'experience' ? '2023-2025' : '2015-2025'}
                             </div>
-                            <div className="text-sm text-gray-400">Période</div>
+                            <div className="text-sm text-gray-600">Période</div>
                         </div>
                     </div>
                 </div>
